@@ -12,6 +12,7 @@ Built with plain **HTML5, CSS3, and vanilla JavaScript**. No frameworks, no buil
   - Follows the system preference until the visitor picks a theme
   - The chosen theme is saved in `localStorage`
 - Sticky navbar with a responsive mobile menu
+- Contact form that sends email straight to your inbox (via Web3Forms)
 - Selected work section: 3 projects shown first, the rest open with "View All Projects"
 - Experience timeline, technical stack, education, and contact sections
 - Subtle scroll reveal animations (disabled for visitors who prefer reduced motion)
@@ -51,6 +52,16 @@ Search `index.html` for `Replace with CV/Resume URL`. There are three places, an
 3. Hero section
 
 Replace `#` with the link to your CV in all three.
+
+### Contact form (sends email directly)
+
+The form uses [Web3Forms](https://web3forms.com), a free service that works on static sites like GitHub Pages.
+
+1. Go to web3forms.com and enter your email to get an **Access Key**. Confirm it from the email they send.
+2. In `index.html`, find `YOUR_ACCESS_KEY` and replace it with your key.
+3. Publish, then send a test message.
+
+Messages arrive in your inbox. The access key is designed to be public, so it is safe to keep in the page. Until the key is replaced, the form shows a message pointing visitors to your email address.
 
 ### Colors and fonts
 
