@@ -49,4 +49,28 @@
     items.forEach(function (el) { io.observe(el); });
     document.documentElement.classList.add('js');
   }
+
+  // ---- Contact form (sends via Web3Forms; no page reload) ----
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('form-status');
+  var send = document.getElementById('f-send');
+  function say(msg, cls) { status.textContent = msg; status.className = 'form__status ' + cls; }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (form.access_key.value === 'YOUR_ACCESS_KEY') {
+      say('The form is not set up yet. Please email me directly at mahamed22440@gmail.com.', 'err');
+      return;
+    }
+    send.disabled = true; say('Sending...', '');
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(form)))
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      if (d.success) { form.reset(); say('Thanks. Your message was sent, and I will reply by email.', 'ok'); }
+      else { say('Something went wrong. Please email me at mahamed22440@gmail.com.', 'err'); }
+    }).catch(function () {
+      say('Network error. Please try again or email me at mahamed22440@gmail.com.', 'err');
+    }).finally(function () { send.disabled = false; });
+  });
 })();
