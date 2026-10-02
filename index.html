@@ -1,174 +1,216 @@
-Mohamed ElAzab 
-About Skills Projects Experience Contact Let's Work Together
-Available for freelance work
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohamed ElAzab — Full-Stack .NET Developer &amp; Cybersecurity Student</title>
+<meta name="description" content="Full-Stack .NET developer building web applications, REST APIs and SQL Server databases, with a Cybersecurity background that shapes how I write secure backend code.">
+<meta name="author" content="Mohamed ElAzab">
+<meta name="theme-color" content="#241A17">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mohamed ElAzab — Full-Stack .NET Developer">
+<meta property="og:description" content="Web applications, REST APIs and database systems built with C#, ASP.NET Core and SQL Server, with security in mind.">
+<meta property="og:site_name" content="Mohamed ElAzab">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233A2924'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23F6F1EA' text-anchor='middle'%3EME%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className='js'</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-Full-Stack .NET Developer with a Security Mindset.
-I build web applications, REST APIs and database-driven systems with C#, ASP.NET Core, Entity Framework Core and SQL Server. My background in Cybersecurity means I think about authentication, input validation and data protection from the first line of code.
+<header class="site-header">
+  <div class="wrap bar">
+    <a href="#top" class="brand">Mohamed ElAzab</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu"><span></span><span></span></button>
+    <nav id="nav" class="nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary btn-sm">Let's Work Together</a>
+    </nav>
+  </div>
+</header>
 
-I don't just build applications. I build them with security in mind.
-
-Start a Project View Projects
-ItemsController.cs
-[Authorize]
-[HttpGet("{id}")]
-public async Task<IActionResult> Get(int id)
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Available for freelance work</p>
+        <h1>Full-Stack .NET Developer with a Security Mindset.</h1>
+        <p class="lead">I build web applications, REST APIs and database-driven systems with C#, ASP.NET Core, Entity Framework Core and SQL Server. My background in Cybersecurity means I think about authentication, input validation and data protection from the first line of code.</p>
+        <p class="note">I don't just build applications. I build them with security in mind.</p>
+        <div class="actions">
+          <a href="#contact" class="btn btn-primary">Start a Project</a>
+          <a href="#projects" class="btn btn-ghost">View Projects</a>
+        </div>
+      </div>
+      <div class="code-card" aria-label="Tech stack overview">
+        <div class="code-top"><i></i><i></i><i></i><span>ItemsController.cs</span></div>
+<pre><code><b>[Authorize]</b>
+<b>[HttpGet("{id}")]</b>
+public async Task&lt;IActionResult&gt; Get(int id)
 {
     var item = await _db.Items
         .AsNoTracking()
-        .FirstOrDefaultAsync(i => i.Id == id);
+        .FirstOrDefaultAsync(i =&gt; i.Id == id);
 
     return item is null ? NotFound() : Ok(item);
-}
-C#
-ASP.NET Core
-REST APIs
-SQL Server
-EF Core
-Security Mindset
-About
+}</code></pre>
+        <ul class="chips">
+          <li>C#</li><li>ASP.NET Core</li><li>REST APIs</li><li>SQL Server</li><li>EF Core</li><li class="chip-accent">Security Mindset</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-Developer first, with a security background
-I'm a Cybersecurity student at Zagazig University (Faculty of Computers and Information), and my practical focus is Full-Stack .NET development. I've studied networks, web security and penetration testing, which gives me a different view of how software is built and where it breaks.
+  <section id="about">
+    <div class="wrap narrow reveal">
+      <p class="eyebrow">About</p>
+      <h2>Developer first, with a security background</h2>
+      <p>I'm a Cybersecurity student at Zagazig University (Faculty of Computers and Information), and my practical focus is Full-Stack .NET development. I've studied networks, web security and penetration testing, which gives me a different view of how software is built and where it breaks.</p>
+      <p>That means I understand how an application talks to its database, how authentication should work, how to protect an API, and how simple mistakes like string-built queries turn into SQL Injection. I try to write backend code with those risks in mind from the start, not as a fix at the end.</p>
+    </div>
+  </section>
 
-That means I understand how an application talks to its database, how authentication should work, how to protect an API, and how simple mistakes like string-built queries turn into SQL Injection. I try to write backend code with those risks in mind from the start, not as a fix at the end.
+  <section class="alt">
+    <div class="wrap reveal">
+      <p class="eyebrow">Why work with me</p>
+      <h2>What I bring</h2>
+      <div class="grid">
+        <article class="card"><h3>Full-Stack .NET Development</h3><p>Web applications and REST APIs using C#, ASP.NET Core, Entity Framework Core and SQL Server.</p></article>
+        <article class="card"><h3>Backend &amp; Database Engineering</h3><p>API design, relational databases, data models, CRUD systems and authentication.</p></article>
+        <article class="card"><h3>Security-Minded Development</h3><p>Authentication, authorization, input validation and SQL Injection prevention built into the code.</p></article>
+        <article class="card"><h3>Problem Solving</h3><p>I look at the system as a whole instead of only the piece of code in front of me.</p></article>
+      </div>
+    </div>
+  </section>
 
-Why work with me
+  <section id="skills">
+    <div class="wrap reveal">
+      <p class="eyebrow">Skills</p>
+      <h2>Tools I work with</h2>
+      <div class="grid skills">
+        <div class="skill"><h3>Backend</h3><ul class="chips"><li>C#</li><li>ASP.NET Core</li><li>REST APIs</li><li>Entity Framework Core</li><li>LINQ</li></ul></div>
+        <div class="skill"><h3>Database</h3><ul class="chips"><li>SQL Server</li><li>T-SQL</li><li>Database Design</li><li>Stored Procedures</li></ul></div>
+        <div class="skill"><h3>Frontend</h3><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive Design</li></ul></div>
+        <div class="skill"><h3>Security</h3><ul class="chips"><li>Web Application Security</li><li>OWASP Top 10</li><li>Penetration Testing</li><li>Secure Coding</li><li>Network Security</li></ul></div>
+        <div class="skill"><h3>Tools</h3><ul class="chips"><li>Git</li><li>GitHub</li><li>Visual Studio</li><li>VS Code</li><li>Postman</li></ul></div>
+      </div>
+    </div>
+  </section>
 
-What I bring
-Full-Stack .NET Development
-Web applications and REST APIs using C#, ASP.NET Core, Entity Framework Core and SQL Server.
+  <section class="alt">
+    <div class="wrap reveal">
+      <p class="eyebrow">Services</p>
+      <h2>What I can build</h2>
+      <div class="grid">
+        <article class="card"><h3>Web Applications</h3><p>Custom web applications built with ASP.NET Core and modern frontend technologies.</p></article>
+        <article class="card"><h3>REST APIs</h3><p>Secure, well-structured APIs for web and mobile applications.</p></article>
+        <article class="card"><h3>Database Systems</h3><p>SQL Server design, relationships, queries and Entity Framework Core integration.</p></article>
+        <article class="card"><h3>Business Applications</h3><p>CRUD systems, dashboards, admin panels, authentication and internal tools.</p></article>
+        <article class="card"><h3>Existing Project Improvements</h3><p>Fixing bugs, adding features to ASP.NET Core projects and connecting APIs with databases.</p></article>
+        <article class="card"><h3>Security-Minded Review</h3><p>Looking at your application from both a developer's and a security perspective.</p></article>
+      </div>
+    </div>
+  </section>
 
-Backend & Database Engineering
-API design, relational databases, data models, CRUD systems and authentication.
+  <section id="projects">
+    <div class="wrap reveal">
+      <p class="eyebrow">Projects</p>
+      <h2>Development projects</h2>
+      <div class="grid">
+        <article class="card project">
+          <h3>BikeStores — SQL Database Project</h3>
+          <p>A database-driven project on SQL Server. Normalized relational model (3NF), parameterized stored procedures to prevent SQL Injection, views for restricted data access, triggers for auditing changes, and index tuning for slow queries.</p>
+          <ul class="chips"><li>SQL Server</li><li>T-SQL</li><li>Database Design</li><li>Stored Procedures</li></ul>
+          <a class="link" href="https://github.com/Elazab2005/BikeStores-SQL-Project" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+        </article>
+      </div>
 
-Security-Minded Development
-Authentication, authorization, input validation and SQL Injection prevention built into the code.
+      <h2 id="security" class="sub">Security &amp; networking projects</h2>
+      <p class="muted">Lab work done in isolated, authorized environments. It's where my security thinking comes from.</p>
+      <div class="grid">
+        <article class="card project">
+          <h3>Metasploitable 3 Penetration Test</h3>
+          <p>A black-box penetration test against an isolated target, from enumeration to a written remediation report.</p>
+          <ul class="chips"><li>Kali Linux</li><li>Nmap</li><li>Metasploit</li><li>Nessus</li></ul>
+          <details><summary>What I did</summary><ul class="points"><li>Mapped TCP/UDP services and versions with Nmap.</li><li>Combined Nessus scans with manual checks to confirm real vulnerabilities.</li><li>Exploited them with Metasploit to prove impact, then wrote up fixes.</li></ul></details>
+          <a class="link" href="https://github.com/Elazab2005/Metasploitable3-Penetration-Testing-Report" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+        </article>
+        <article class="card project">
+          <h3>UnrealIRCd Backdoor Analysis (CVE-2010-2075)</h3>
+          <p>Reproduced and analyzed the backdoor planted in the UnrealIRCd 3.2.8.1 release to understand how it allows remote command execution.</p>
+          <ul class="chips"><li>Netcat</li><li>Metasploit</li><li>Kali Linux</li></ul>
+          <details><summary>What I did</summary><ul class="points"><li>Studied how the backdoor was injected into the official archive.</li><li>Triggered it with a raw TCP payload to port 6667, then with a reverse shell.</li><li>Documented defenses: verify signatures and checksums, restrict outbound traffic.</li></ul></details>
+          <a class="link" href="https://github.com/Elazab2005/unrealircd-backdoor-pentest-report" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+        </article>
+        <article class="card project">
+          <h3>ARP Poisoning Simulation &amp; Defense</h3>
+          <p>Simulated a man-in-the-middle attack on a switched LAN in GNS3, then stopped it with Cisco Layer-2 protections.</p>
+          <ul class="chips"><li>GNS3</li><li>Cisco IOS</li><li>Ettercap</li><li>DHCP Snooping</li><li>DAI</li></ul>
+          <details><summary>What I did</summary><ul class="points"><li>Poisoned ARP caches with Ettercap to intercept traffic.</li><li>Enabled DHCP Snooping, Dynamic ARP Inspection and Port Security.</li><li>Re-ran the attack and confirmed forged ARP replies were dropped.</li></ul></details>
+          <a class="link" href="https://github.com/Elazab2005/ARP-Poisoning-Simulation-And-Remediation" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+        </article>
+        <article class="card project">
+          <h3>Secure Branch Office Network</h3>
+          <p>A segmented, multi-VLAN branch office network with access control and redundant links.</p>
+          <ul class="chips"><li>GNS3</li><li>Cisco IOS</li><li>VLANs</li><li>ACLs</li><li>LACP</li></ul>
+          <details><summary>What I did</summary><ul class="points"><li>Separated management, employee, guest and server VLANs.</li><li>Wrote ACLs to block guests from internal servers.</li><li>Configured LACP EtherChannel, SSHv2 and authenticated OSPF.</li></ul></details>
+          <a class="link" href="https://github.com/Elazab2005/Secure-Branch-Office-Lab" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
-Problem Solving
-I look at the system as a whole instead of only the piece of code in front of me.
+  <section id="experience" class="alt">
+    <div class="wrap reveal">
+      <p class="eyebrow">Experience</p>
+      <h2>Education &amp; training</h2>
+      <div class="two">
+        <div class="card">
+          <h3>B.Sc. in Cybersecurity</h3>
+          <p>Faculty of Computers and Information<br>Zagazig University<br><strong>2024 — 2028</strong></p>
+          <p class="muted">Cybersecurity · Networks · Operating Systems · Databases · Programming · Computer Architecture</p>
+        </div>
+        <div class="card">
+          <h3>Professional training</h3>
+          <ul class="timeline">
+            <li><strong>Full-Stack .NET Development</strong><span>Digital Egypt Pioneers Initiative (DEPI)</span></li>
+            <li><strong>Ethical Hacking &amp; Penetration Testing</strong><span>Practical security training</span></li>
+            <li><strong>CCNA / Network Security</strong><span>Network infrastructure &amp; security training</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-Skills
+  <section id="contact" class="contact">
+    <div class="wrap narrow">
+      <h2>Have a project in mind? Let's build it.</h2>
+      <p>If you have a web application, API, database system, or an existing project that needs development or improvement, feel free to get in touch.</p>
+      <div class="actions">
+        <a class="btn btn-light" href="mailto:mahamed22440@gmail.com?subject=New%20project%20inquiry">Start a Project</a>
+        <a class="btn btn-outline" href="mailto:mahamed22440@gmail.com">Email Me</a>
+        <a class="btn btn-outline" href="https://wa.me/201034520369" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn btn-outline" href="https://github.com/Elazab2005" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn btn-outline" href="https://linkedin.com/in/muhammad-elazab/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-Tools I work with
-Backend
-C#
-ASP.NET Core
-REST APIs
-Entity Framework Core
-LINQ
-Database
-SQL Server
-T-SQL
-Database Design
-Stored Procedures
-Frontend
-HTML
-CSS
-JavaScript
-Responsive Design
-Security
-Web Application Security
-OWASP Top 10
-Penetration Testing
-Secure Coding
-Network Security
-Tools
-Git
-GitHub
-Visual Studio
-VS Code
-Postman
-Services
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div><strong>Mohamed ElAzab</strong><br><span>Full-Stack .NET Developer · Cybersecurity Background</span></div>
+    <nav aria-label="Footer"><a href="https://github.com/Elazab2005" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/muhammad-elazab/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:mahamed22440@gmail.com">Email</a></nav>
+    <small>© 2026 Mohamed ElAzab</small>
+  </div>
+</footer>
 
-What I can build
-Web Applications
-Custom web applications built with ASP.NET Core and modern frontend technologies.
-
-REST APIs
-Secure, well-structured APIs for web and mobile applications.
-
-Database Systems
-SQL Server design, relationships, queries and Entity Framework Core integration.
-
-Business Applications
-CRUD systems, dashboards, admin panels, authentication and internal tools.
-
-Existing Project Improvements
-Fixing bugs, adding features to ASP.NET Core projects and connecting APIs with databases.
-
-Security-Minded Review
-Looking at your application from both a developer's and a security perspective.
-
-Projects
-
-Development projects
-BikeStores — SQL Database Project
-A database-driven project on SQL Server. Normalized relational model (3NF), parameterized stored procedures to prevent SQL Injection, views for restricted data access, triggers for auditing changes, and index tuning for slow queries.
-
-SQL Server
-T-SQL
-Database Design
-Stored Procedures
-View on GitHub →
-Security & networking projects
-Lab work done in isolated, authorized environments. It's where my security thinking comes from.
-
-Metasploitable 3 Penetration Test
-A black-box penetration test against an isolated target, from enumeration to a written remediation report.
-
-Kali Linux
-Nmap
-Metasploit
-Nessus
-What I did
-View on GitHub →
-UnrealIRCd Backdoor Analysis (CVE-2010-2075)
-Reproduced and analyzed the backdoor planted in the UnrealIRCd 3.2.8.1 release to understand how it allows remote command execution.
-
-Netcat
-Metasploit
-Kali Linux
-What I did
-View on GitHub →
-ARP Poisoning Simulation & Defense
-Simulated a man-in-the-middle attack on a switched LAN in GNS3, then stopped it with Cisco Layer-2 protections.
-
-GNS3
-Cisco IOS
-Ettercap
-DHCP Snooping
-DAI
-What I did
-View on GitHub →
-Secure Branch Office Network
-A segmented, multi-VLAN branch office network with access control and redundant links.
-
-GNS3
-Cisco IOS
-VLANs
-ACLs
-LACP
-What I did
-View on GitHub →
-Experience
-
-Education & training
-B.Sc. in Cybersecurity
-Faculty of Computers and Information
-Zagazig University
-2024 — 2028
-
-Cybersecurity · Networks · Operating Systems · Databases · Programming · Computer Architecture
-
-Professional training
-Full-Stack .NET DevelopmentDigital Egypt Pioneers Initiative (DEPI)
-Ethical Hacking & Penetration TestingPractical security training
-CCNA / Network SecurityNetwork infrastructure & security training
-Have a project in mind? Let's build it.
-If you have a web application, API, database system, or an existing project that needs development or improvement, feel free to get in touch.
-
-Start a Project Email Me WhatsApp GitHub LinkedIn
-Mohamed ElAzab
-Full-Stack .NET Developer · Cybersecurity Background
-GitHubLinkedInEmail
-© 2026 Mohamed ElAzab
+<script src="js/main.js" defer></script>
+</body>
+</html>
