@@ -214,12 +214,26 @@
   <section class="sec wrap contact" id="contact" aria-labelledby="contact-h">
     <h2 id="contact-h" class="contact__title">Let's build something useful.</h2>
     <p class="contact__lead">I'm open to freelance opportunities, development projects, collaborations, and technical opportunities.</p>
-    <dl class="contact__list">
+    <div class="contact__grid">
+      <dl class="contact__list">
       <div><dt>Email</dt><dd><a href="mailto:mahamed22440@gmail.com">mahamed22440@gmail.com</a></dd></div>
       <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/muhammad-elazab/" target="_blank" rel="noopener">linkedin.com/in/muhammad-elazab</a></dd></div>
       <div><dt>GitHub</dt><dd><a href="https://github.com/Elazab2005" target="_blank" rel="noopener">github.com/Elazab2005</a></dd></div>
       <div><dt>Phone</dt><dd><a href="tel:+201034520369">01034520369</a></dd></div>
     </dl>
+      <!-- Contact form: sends email through Web3Forms (see README). Replace YOUR_ACCESS_KEY below. -->
+      <form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New message from your portfolio">
+        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="5" required></textarea></div>
+        <button class="btn btn--primary btn--lg" type="submit" id="f-send">Send message</button>
+        <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
   </section>
 </main>
 
