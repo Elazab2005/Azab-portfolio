@@ -96,7 +96,7 @@
 
   // Keep Latin terms (C#, .NET, SQL Server...) as intact left-to-right runs inside Arabic text.
   function isolate(t) {
-    t = t.replace(/و(?=[A-Za-z.])/g, 'و ');
+    t = t.replace(/\s*و(?=[A-Za-z.])/g, '، ');
     return t.replace(/\.?[A-Za-z][A-Za-z0-9.#+\-]*(?: \.?[A-Za-z0-9][A-Za-z0-9.#+\-]*)*/g, function (m) { return '\u2066' + m + '\u2069'; });
   }
 
