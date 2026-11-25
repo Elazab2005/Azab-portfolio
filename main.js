@@ -25,7 +25,8 @@
   burger.addEventListener('click', function () {
     var open = menu.classList.toggle('open');
     burger.setAttribute('aria-expanded', open);
-    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    var ar2 = window.__lang && window.__lang() === 'ar';
+    burger.setAttribute('aria-label', open ? (ar2 ? 'إغلاق القائمة' : 'Close menu') : (ar2 ? 'فتح القائمة' : 'Open menu'));
   });
   menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') closeMenu(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
@@ -37,7 +38,8 @@
     var show = more.getAttribute('aria-expanded') !== 'true';
     extra.forEach(function (el) { el.hidden = !show; if (show) el.classList.add('is-in'); });
     more.setAttribute('aria-expanded', show);
-    more.textContent = show ? 'Show Fewer Projects' : 'View All Projects';
+    var ar = window.__lang && window.__lang() === 'ar';
+    more.textContent = show ? (ar ? 'عرض عدد أقل' : 'Show Fewer Projects') : (ar ? 'عرض كل المشاريع' : 'View All Projects');
   });
 
   // ---- Scroll reveal ----
@@ -61,16 +63,16 @@
       say('The form is not set up yet. Please email me directly at mahamed22440@gmail.com.', 'err');
       return;
     }
-    send.disabled = true; say('Sending...', '');
+    send.disabled = true; say(window.__t ? window.__t('sending') : 'Sending...', '');
     fetch(form.action, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(Object.fromEntries(new FormData(form)))
     }).then(function (r) { return r.json(); }).then(function (d) {
-      if (d.success) { form.reset(); say('Thanks. Your message was sent, and I will reply by email.', 'ok'); }
-      else { say('Something went wrong. Please email me at mahamed22440@gmail.com.', 'err'); }
+      if (d.success) { form.reset(); say(window.__t ? window.__t('sent') : 'Thanks. Your message was sent, and I will reply by email.', 'ok'); }
+      else { say(window.__t ? window.__t('fail') : 'Something went wrong. Please email me at mahamed22440@gmail.com.', 'err'); }
     }).catch(function () {
-      say('Network error. Please try again or email me at mahamed22440@gmail.com.', 'err');
+      say(window.__t ? window.__t('net') : 'Network error. Please try again or email me at mahamed22440@gmail.com.', 'err');
     }).finally(function () { send.disabled = false; });
   });
 })();
