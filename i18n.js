@@ -22,6 +22,7 @@
     'Web Development': 'تطوير الويب',
     'Featured': 'مميّز',
     'A modern responsive coffee shop website focused on clean UI, responsive design, and frontend development.': 'موقع حديث ومتجاوب لمقهى، يركّز على واجهة مستخدم نظيفة وتصميم متجاوب وتطوير الواجهة الأمامية.',
+    'A modern responsive e-commerce website for a luxury evening dress atelier, featuring a product catalog, product detail pages, and buy-or-rent ordering.': 'موقع تجارة إلكترونية حديث ومتجاوب لأتيليه فساتين سهرة فاخر، يتضمّن كتالوج منتجات وصفحات تفاصيل للمنتجات وإمكانية الشراء أو الإيجار.',
     'Live Demo': 'معاينة مباشرة',
     'GitHub': 'GitHub',
     'Database / SQL Server': 'قواعد البيانات / SQL Server',
